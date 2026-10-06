@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% block title %}Študenti{% endblock %}
+
+{% block content %}
+  <h1 class="text-primary">Študenti</h1>
+
+  <h2 class="mt-4">Zoznam študentov</h2>
+  <ul class="list-group">
+    {% for student in studenti %}
+      <li class="list-group-item">{{ student.meno }}</li>
+    {% endfor %}
+  </ul>
+
+  <h2 class="mt-4">Tabuľka študentov</h2>
+  <table class="table table-striped table-bordered table-hover">
+    <thead class="table-primary">
+      <tr>
+        <th>Meno</th>
+        <th>Trieda</th>
+        <th>Hodnotenie</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for student in studenti %}
+        <tr>
+          <td>{{ student.meno }}</td>
+          <td>{{ student.trieda }}</td>
+          <td>{{ student.hodnotenie }}</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+{% endblock %}

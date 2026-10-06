@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block title %}Prihlásenie{% endblock %}
+
+{% block content %}
+  {% if prihlaseny %}
+    <h1 class="text-success">Vitaj späť, používateľ!</h1>
+  {% else %}
+    <h1 class="text-danger">Prosím, prihláste sa</h1>
+  {% endif %}
+{% endblock %}

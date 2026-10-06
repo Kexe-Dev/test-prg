@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+
+{% block title %}Domov{% endblock %}
+
+{% block content %}
+  <h1 class="text-primary">Vitaj, {{ meno }}!</h1>
+  <p class="lead">Toto je jednoduchý Flask projekt s Bootstrapom.</p>
+  <a class="btn btn-primary" href="{{ url_for('studenti') }}">Zoznam študentov</a>
+{% endblock %}
